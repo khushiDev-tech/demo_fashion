@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxury Navbar</title>
+<style>
+    .products-card {
+    position: absolute;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.products-card.active {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 5;
+}
+
+.products-card.prev-1 {
+    transform: translateX(-250px) scale(0.9);
+    opacity: 0.8;
+    z-index: 4;
+}
+
+.products-card.prev-2 {
+    transform: translateX(-450px) scale(0.8);
+    opacity: 0.6;
+    z-index: 3;
+}
+
+.products-card.next-1 {
+    transform: translateX(250px) scale(0.9);
+    opacity: 0.8;
+    z-index: 4;
+}
+
+.products-card.next-2 {
+    transform: translateX(450px) scale(0.8);
+    opacity: 0.6;
+    z-index: 3;
+}
+</style>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Announcement -->
+
+<div class="top-bar">
+
+    <button class="arrow prev">
+        <i class="fa-solid fa-angle-left"></i>
+    </button>
+
+    <div class="announcement">
+        <span class="announcement-text">
+            FREE WORLDWIDE SHIPPING ON ALL ORDERS
+        </span>
+    </div>
+
+    <button class="arrow next">
+        <i class="fa-solid fa-angle-right"></i>
+    </button>
+
+</div>
+
+
+<!-- Navbar -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="logo.avif" alt="logo">
+
+</div>
+
+
+<ul class="nav-links">
+
+<li><a href="#">FESTIVE COLLECTION</a></li>
+
+<li><a href="#">NEW ARRIVALS</a></li>
+
+<li><a href="#">WOMEN'S</a></li>
+
+<li><a href="#">MEN'S</a></li>
+
+<li><a href="#">COUPLE'S</a></li>
+
+</ul>
+
+
+<div class="nav-icons">
+
+<a href="#"><i class="fa-regular fa-user"></i></a>
+
+<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+<a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+
+<div class="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+
+    <img src="hero.webp" alt="Hero Banner">
+
+</section>
+
+<!-- Bottom Announcement -->
+<section class="hero-announcement">
+
+    <div class="announcement-track">
+
+        <span>⚡ ₹500/- For Multiple Items, Advance Payment Required ⚡</span>
+
+        <span>⚡ ₹500/- For Multiple Items, Advance Payment Required ⚡</span>
+
+        <span>⚡ ₹500/- For Multiple Items, Advance Payment Required ⚡</span>
+
+        <span>⚡ ₹500/- For Multiple Items, Advance Payment Required ⚡</span>
+
+    </div>
+
+</section>
+
+<section class="category-section">
+
+    <div class="container">
+
+        <div class="category-card">
+            <div class="category-img">
+                <img src="suit.webp" alt="Anarkali Suit">
+            </div>
+            <h3>ANARKALI SUIT</h3>
+        </div>
+
+        <div class="category-card">
+            <div class="category-img">
+                <img src="Co-ord.webp" alt="Lehenga Choli">
+            </div>
+            <h3>LEHNGA CHOLI</h3>
+        </div>
+
+        <div class="category-card">
+            <div class="category-img">
+                <img src="dress.webp" alt="Printed Suit Set">
+            </div>
+            <h3>PRINTED SUIT SET</h3>
+        </div>
+
+           <div class="category-card">
+            <div class="category-img">
+                <img src="suits.webp" alt="Printed Suit Set">
+            </div>
+            <h3>PRINTED SUIT SET</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="trending-products">
+
+    <!-- Heading -->
+
+    <div class="section-heading">
+
+        <h2>Trendy Anarkali Sets</h2>
+
+        <div class="heading-divider">
+            <span></span>
+            <i class="fa-solid fa-spa"></i>
+            <span></span>
+        </div>
+
+        <p>Top view in this week</p>
+
+    </div>
+
+    <!-- Products -->
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+
+        <div class="product-card">
+
+            <span class="discount-badge">SAVE 10%</span>
+
+            <div class="product-image">
+
+                <img src="https://www.nete.in/cdn/shop/files/Sol-Dress-E.jpg?v=1750744459&width=360" class="primary-img" alt="">
+                <img src="https://www.nete.in/cdn/shop/files/Sol-Dress-A.jpg?v=1750744459&width=640" class="secondary-img" alt="">
+
+                <div class="wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Red Anarkali Set</h3>
+
+                <div class="price">
+                    <span class="current-price">INR 9,630.00</span>
+                    <span class="old-price">INR 10,700.00</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Product 2 -->
+
+        <div class="product-card">
+
+            <span class="discount-badge">SAVE 15%</span>
+
+            <div class="product-image">
+
+                <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-A_2048x2048.png?v=1766748710" class="primary-img" alt="">
+                <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-D.png?v=1766748726&width=490" class="secondary-img" alt="">
+
+                <div class="wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Paisley Jacket</h3>
+
+                <div class="price">
+                    <span class="current-price">INR 15,300.00</span>
+                    <span class="old-price">INR 18,000.00</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Product 3 -->
+
+        <div class="product-card">
+
+            <span class="discount-badge">SAVE 10%</span>
+
+            <div class="product-image">
+
+                <img src="https://www.nete.in/cdn/shop/files/Isla-Set-A_2048x2048.png?v=1756026859" class="primary-img" alt="">
+                <img src="https://www.nete.in/cdn/shop/files/Isla-Set-B.png?v=1756026859&width=490" class="secondary-img" alt="">
+
+                <div class="wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Sol Dress</h3>
+
+                <div class="price">
+                    <span class="current-price">INR 6,750.00</span>
+                    <span class="old-price">INR 7,500.00</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Product 4 -->
+
+        <div class="product-card">
+
+            <span class="discount-badge">SAVE 10%</span>
+
+            <div class="product-image">
+
+                <img src="https://www.nete.in/cdn/shop/files/Misty-Saree-C.jpg?v=1750744461&width=490" class="primary-img" alt="">
+                <img src="https://www.nete.in/cdn/shop/files/Misty-Saree-A.jpg?v=1750744461&width=490" class="secondary-img" alt="">
+
+                <div class="wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Isla Set</h3>
+
+                <div class="price">
+                    <span class="current-price">INR 6,291.00</span>
+                    <span class="old-price">INR 6,990.00</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Product 5 -->
+
+<div class="product-card">
+
+    <span class="discount-badge">SAVE 12%</span>
+
+    <div class="product-image">
+
+        <img src="https://www.nete.in/cdn/shop/files/Cobalt-Blue-Shirt-G.jpg?v=1735033361&width=490"
+            class="primary-img" alt="">
+
+        <img src="https://www.nete.in/cdn/shop/files/Cobalt-Blue-Shirt-A.jpg?v=1735033362&width=490"
+            class="secondary-img" alt="">
+
+        <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <h3>Anya Dress</h3>
+
+        <div class="price">
+            <span class="current-price">INR 8,950.00</span>
+            <span class="old-price">INR 10,200.00</span>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Product 6 -->
+
+<div class="product-card">
+
+    <span class="discount-badge">SAVE 8%</span>
+
+    <div class="product-image">
+
+        <img src="https://www.nete.in/cdn/shop/files/Blu-Dress-A.png?v=1744719331&width=490"
+            class="primary-img" alt="">
+
+        <img src="https://www.nete.in/cdn/shop/files/Blu-Dress-B.png?v=1744719331&width=490"
+            class="secondary-img" alt="">
+
+        <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <h3>Meher Set</h3>
+
+        <div class="price">
+            <span class="current-price">INR 7,890.00</span>
+            <span class="old-price">INR 8,590.00</span>
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+
+
+<section class="video-products">
+    <button class="slider-btn prev">&#10094;</button>
+
+    <div class="video-slider">
+
+        <!-- Card 1 -->
+        <div class="video-card">
+            <video autoplay muted loop playsinline>
+                <source src="https://www.andindia.com/on/demandware.static/-/Sites-AND-Library/default/dwecd63999/Website_Videos/watch-and-buy/Manpreet_2_shots.mp4" type="video/mp4">
+            </video>
+
+            <div class="product-overlay">
+                <img src="https://www.nete.in/cdn/shop/files/Blu-Dress-A.png?v=1744719331&width=490" alt="">
+
+                <div class="product-info">
+                    <h3>Ilaria Muslin Farshi Salwar Set</h3>
+
+                    <div class="price">
+                        <span class="new-price">₹2,650</span>
+                        <span class="old-price">₹3,800</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="video-card">
+            <video autoplay muted loop playsinline>
+                <source src="https://www.andindia.com/on/demandware.static/-/Sites-AND-Library/default/dw926c8cec/Website_Videos/watch-and-buy/Steffhy_1_shots.mp4" type="video/mp4">
+            </video>
+
+            <div class="product-overlay">
+                <img src="https://www.nete.in/cdn/shop/files/Blu-Dress-A.png?v=1744719331&width=490" alt="">
+
+                <div class="product-info">
+                    <h3>Hirz Green Heavy Embroidered Sharara</h3>
+
+                    <div class="price">
+                        <span class="new-price">₹7,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-card">
+            <video autoplay muted loop playsinline>
+                <source src="https://www.andindia.com/on/demandware.static/-/Sites-AND-Library/default/dw59927ba2/Website_Videos/watch-and-buy/Ahana_preview.MP4" type="video/mp4">
+            </video>
+
+            <div class="product-overlay">
+                <img src="https://www.nete.in/cdn/shop/files/Blu-Dress-A.png?v=1744719331&width=490" alt="">
+
+                <div class="product-info">
+                    <h3>Hirz Green Heavy Embroidered Sharara</h3>
+
+                    <div class="price">
+                        <span class="new-price">₹7,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-card">
+            <video autoplay muted loop playsinline>
+                <source src="https://www.andindia.com/on/demandware.static/-/Sites-AND-Library/default/dw320efc43/Website_Videos/watch-and-buy/Aanchal_3_shots.mp4" type="video/mp4">
+            </video>
+
+            <div class="product-overlay">
+                <img src="https://www.nete.in/cdn/shop/files/Blu-Dress-A.png?v=1744719331&width=490" alt="">
+
+                <div class="product-info">
+                    <h3>Hirz Green Heavy Embroidered Sharara</h3>
+
+                    <div class="price">
+                        <span class="new-price">₹7,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-card">
+            <video autoplay muted loop playsinline>
+                <source src="https://www.andindia.com/on/demandware.static/-/Sites-AND-Library/default/dw320efc43/Website_Videos/watch-and-buy/Aanchal_3_shots.mp4" type="video/mp4">
+            </video>
+
+            <div class="product-overlay">
+                <img src="https://www.nete.in/cdn/shop/files/Blu-Dress-A.png?v=1744719331&width=490" alt="">
+
+                <div class="product-info">
+                    <h3>Hirz Green Heavy Embroidered Sharara</h3>
+
+                    <div class="price">
+                        <span class="new-price">₹7,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-card">
+            <video autoplay muted loop playsinline>
+                <source src="https://www.andindia.com/on/demandware.static/-/Sites-AND-Library/default/dw320efc43/Website_Videos/watch-and-buy/Aanchal_3_shots.mp4" type="video/mp4">
+            </video>
+
+            <div class="product-overlay">
+                <img src="https://www.nete.in/cdn/shop/files/Blu-Dress-A.png?v=1744719331&width=490" alt="">
+
+                <div class="product-info">
+                    <h3>Hirz Green Heavy Embroidered Sharara</h3>
+
+                    <div class="price">
+                        <span class="new-price">₹7,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more cards similarly -->
+
+    </div>
+
+    <button class="slider-btn next">&#10095;</button>
+</section>
+
+
+<section class="trendings-picks">
+
+    <div class="heading-wrapper">
+        <h2>Trending Picks</h2>
+
+        <div class="nav-buttons">
+            <button class="nav-btn prev">&#8249;</button>
+            <button class="nav-btn next">&#8250;</button>
+        </div>
+    </div>
+
+    <div class="carousel-container">
+
+        <div class="carousel">
+
+            <div class="products-card">
+                <img src="Co-ord.webp" alt="">
+
+                <div class="products-info">
+                    <h3>Embroidered Floral Kurta</h3>
+
+                    <div class="price">
+                        <span>Rs. 699.00</span>
+                        <del>Rs. 1,199.00</del>
+                    </div>
+
+                    <button>Shop now</button>
+                </div>
+            </div>
+
+            <div class="products-card">
+                <img src="suits.webp" alt="">
+
+                <div class="products-info">
+                    <h3>Elegant Chanderi Kurti</h3>
+
+                    <div class="price">
+                        <span>Rs. 599.00</span>
+                        <del>Rs. 999.00</del>
+                    </div>
+
+                    <button>Shop now</button>
+                </div>
+            </div>
+
+            <div class="products-card active">
+                <img src="suit.webp" alt="">
+
+                <div class="products-info">
+                    <h3>Siya Mirror Plazo Set</h3>
+
+                    <div class="price">
+                        <span>Rs. 1,199.00</span>
+                        <del>Rs. 1,599.00</del>
+                    </div>
+
+                    <button>Shop now</button>
+                </div>
+            </div>
+
+            <div class="products-card">
+                <img src="dress.webp" alt="">
+
+                <div class="products-info">
+                    <h3>Pearl Blossom Saree</h3>
+
+                    <div class="price">
+                        <span>Rs. 1,199.00</span>
+                        <del>Rs. 2,999.00</del>
+                    </div>
+
+                    <button>Shop now</button>
+                </div>
+            </div>
+
+            <div class="products-card">
+                <img src="https://fabassure.com/cdn/shop/files/IMG-4885_3554e054-83b0-461a-8756-ab01ffd897c6.jpg?v=1781513424&width=1100" alt="">
+
+                <div class="products-info">
+                    <h3>Blue Lehenga Set</h3>
+
+                    <div class="price">
+                        <span>Rs. 6,999.00</span>
+                    </div>
+
+                    <button>Shop now</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="view-all">
+        <button>View all</button>
+    </div>
+
+</section>
+<section class="faq-section">
+  <div class="faq-wrap">
+    <div class="faq-header">
+      <p class="faq-eyebrow">ease out your curiosity with</p>
+      <div class="faq-title">FAQs</div>
+      <div class="faq-divider"></div>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item active">
+        <button class="faq-trigger" onclick="toggle(this)">
+          <div class="faq-icon-wrap"><i class="ti ti-shirt"></i></div>
+          <span class="faq-label">How can you place an order?</span>
+          <div class="faq-chevron"><i class="ti ti-chevron-down"></i></div>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">Browse our collection, select your size and color, then click "Add to Cart." Head to checkout, enter your shipping details, and complete payment. You'll receive a confirmation email within minutes.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggle(this)">
+          <div class="faq-icon-wrap"><i class="ti ti-truck-delivery"></i></div>
+          <span class="faq-label">How to track your shipment?</span>
+          <div class="faq-chevron"><i class="ti ti-chevron-down"></i></div>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">Once your order ships, you'll receive a tracking link via email. You can also visit your order history in your account dashboard and click "Track Order" to get real-time updates.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggle(this)">
+          <div class="faq-icon-wrap"><i class="ti ti-map-pin"></i></div>
+          <span class="faq-label">Do we ship internationally?</span>
+          <div class="faq-chevron"><i class="ti ti-chevron-down"></i></div>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">Yes! We ship to over 50 countries worldwide. International shipping times vary between 7–21 business days depending on your location. Duties and taxes may apply based on your country's regulations.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggle(this)">
+          <div class="faq-icon-wrap"><i class="ti ti-message-circle"></i></div>
+          <span class="faq-label">Have concerns around the product received?</span>
+          <div class="faq-chevron"><i class="ti ti-chevron-down"></i></div>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">We're sorry to hear that! Please contact our support team within 7 days of receiving your order with photos of the issue. We'll arrange a replacement or full refund — your satisfaction is our priority.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Left -->
+        <div class="footer-col about">
+
+            <img src="logo.avif" class="footer-logo">
+
+            <h3>FAB ASSURE BY PRERNA</h3>
+
+            <p>💗 Fabulously Yours 💗</p>
+
+            <p class="mail">
+                fabassure.business@gmail.com
+            </p>
+
+            <div class="social-iconss">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Quick Links -->
+
+        <div class="footer-col">
+
+            <h4>Quick Links</h4>
+
+            <ul>
+
+                <li><a href="#">About Us</a></li>
+
+                <li><a href="#">Shipping Policy</a></li>
+
+                <li><a href="#">Refund Policy</a></li>
+
+                <li><a href="#">Privacy Policy</a></li>
+
+                <li><a href="#">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- Customer -->
+
+        <div class="footer-col">
+
+            <h4>Customer Care</h4>
+
+            <ul>
+
+                <li><a href="#">Track Order</a></li>
+
+                <li><a href="#">Contact Us</a></li>
+
+                <li><a href="#">FAQs</a></li>
+
+                <li><a href="#">Size Guide</a></li>
+
+                <li><a href="#">Exchange</a></li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- Newsletter -->
+
+        <div class="footer-col newsletter">
+
+            <h4>Subscribe & Get 10% OFF</h4>
+
+            <p>Be the first to know about new arrivals and exclusive offers.</p>
+
+            <form>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email">
+
+                <button>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Features -->
+
+    <div class="footer-features">
+
+        <div>
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <span>Free Shipping</span>
+
+        </div>
+
+        <div>
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <span>Secure Payments</span>
+
+        </div>
+
+        <div>
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>100% Secure Checkout</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <p>© 2026 FAB ASSURE BY PRERNA. All Rights Reserved.</p>
+
+        <img src="images/payment.png" alt="Payments">
+
+    </div>
+
+</footer>
+<script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+
+    item.querySelector('.faq-question')
+    .addEventListener('click', () => {
+
+        faqItems.forEach(faq => {
+
+            if(faq !== item){
+                faq.classList.remove('active');
+            }
+
+        });
+
+        item.classList.toggle('active');
+
+    });
+
+});
+</script>
+  <script>
+    function toggle(btn) {
+      const item = btn.closest('.faq-item');
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
+    }
+  </script>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+
+    const cards = document.querySelectorAll(".products-card");
+   const prevBtn = document.querySelector(".nav-buttons .prev");
+const nextBtn = document.querySelector(".nav-buttons .next");
+
+    let activeIndex = 2;
+
+    function updateCarousel() {
+
+        cards.forEach(card => {
+            card.classList.remove(
+                "active",
+                "prev-1",
+                "prev-2",
+                "next-1",
+                "next-2"
+            );
+        });
+
+        cards[activeIndex].classList.add("active");
+
+        cards[(activeIndex - 1 + cards.length) % cards.length]
+            .classList.add("prev-1");
+
+        cards[(activeIndex - 2 + cards.length) % cards.length]
+            .classList.add("prev-2");
+
+        cards[(activeIndex + 1) % cards.length]
+            .classList.add("next-1");
+
+        cards[(activeIndex + 2) % cards.length]
+            .classList.add("next-2");
+    }
+
+    nextBtn.addEventListener("click", () => {
+        activeIndex = (activeIndex + 1) % cards.length;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+        updateCarousel();
+    });
+
+    updateCarousel();
+});
+</script>
+<script>
+    const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 10){
+        header.classList.add("scrolled");
+    }else{
+        header.classList.remove("scrolled");
+    }
+});
+
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.onclick = () => {
+    navLinks.classList.toggle("active");
+
+    menuBtn.innerHTML = navLinks.classList.contains("active")
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+};
+</script>
+<script src="script.js"></script>
+<script>
+const slider = document.querySelector('.video-slider');
+
+document.querySelector('.next').addEventListener('click', () => {
+    slider.scrollBy({
+        left: 350,
+        behavior: 'smooth'
+    });
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    slider.scrollBy({
+        left: -350,
+        behavior: 'smooth'
+    });
+});
+</script>
+</body>
+</html>
