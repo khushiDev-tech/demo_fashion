@@ -613,6 +613,70 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     </div>
 
 </section>
+
+
+<section class="prerna">
+  <!-- HERO -->
+  <section class="hero2">
+    <h1>Fab_You_Lously Yours!</h1>
+    <p>Exclusive Offers &nbsp;||&nbsp; Free Shipping on 2+ Items &nbsp;||&nbsp; No Refunds &nbsp;||&nbsp; Exchange only in case of defects</p>
+    <a href="#" class="hero2-btn">Fab Yourself Now</a>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="story-section" id="storySection">
+
+    <p class="eyebrow">Fab Assure By Prerna</p>
+
+    <div class="rule">
+      <span></span>
+      <div class="rule-dot"></div>
+      <span></span>
+    </div>
+
+    <div class="story-grid">
+
+      <!-- LEFT: Image / Photo -->
+      <div class="image-side">
+        <!--
+          TO ADD PRERNA'S PHOTO:
+          Replace the gradient background in CSS with:
+          background: url('your-photo.jpg') center/cover no-repeat;
+          And remove or adjust the overlay as needed.
+        -->
+        <div class="image-overlay"></div>
+        <div class="image-caption">
+          <h3>Meet<br>Prerna</h3>
+          <p>Founder &amp; Stylist</p>
+        </div>
+      </div>
+
+      <!-- RIGHT: Content -->
+      <div class="content-side">
+        <p class="label">Our Story</p>
+        <h2 class="story-heading">Fashion for<br>every <em>woman</em></h2>
+        <div class="divider"></div>
+        <p class="story-body">
+          After working as a teacher for several years, Prerna noticed a gap in the market for a boutique that offered stylish, high-quality clothing that was also affordable. She decided to take matters into her own hands and started <strong>Fab Assure By Prerna</strong> with the goal of making fashion accessible to women of all backgrounds.
+        </p>
+
+        <p class="promise-label">Our Promise</p>
+        <div class="promise-list">
+          <div class="promise-item">Exclusive offers for our community</div>
+          <div class="promise-item">Free shipping on 2+ items</div>
+          <div class="promise-item">Exchange guaranteed on defects</div>
+          <div class="promise-item">Stylish &amp; affordable for every woman</div>
+        </div>
+
+        <a href="#" class="cta-btn">Know More</a>
+      </div>
+
+    </div>
+
+    <p class="tagline">"Making fashion fabulously yours, one outfit at a time."</p>
+
+  </section>
+</section>
 <section class="faq-section">
   <div class="faq-wrap">
     <div class="faq-header">
@@ -941,5 +1005,27 @@ document.querySelector('.prev').addEventListener('click', () => {
     });
 });
 </script>
+  <script>
+    const section = document.getElementById('storySection');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          section.classList.add('animate');
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+
+    observer.observe(section);
+
+    // Fallback: auto-trigger after 400ms if already in view on load
+    setTimeout(() => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        section.classList.add('animate');
+      }
+    }, 400);
+  </script>
 </body>
 </html>
