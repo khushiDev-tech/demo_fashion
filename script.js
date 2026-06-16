@@ -1,7 +1,8 @@
 const announcements = [
     "FREE WORLDWIDE SHIPPING ON ALL ORDERS",
     "GET 10% OFF ON YOUR FIRST PURCHASE",
-    "NEW SUMMER COLLECTION IS NOW LIVE"
+    "NEW SUMMER COLLECTION IS NOW LIVE",
+    "USE CODE 'FIRSTORDER' TO GET 10% OFF  |  Buy Min ₹2999 · Get 15% Off · USE CODE: FABWOW"
 ];
 
 let current = 0;
@@ -44,6 +45,5 @@ prevBtn.addEventListener("click",()=>{
     showAnnouncement(current);
 
 });
-
 
 
