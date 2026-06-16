@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* body{
+background:#f6f6f6;
+} */
+
+body{
+    font-family: "Open Sans", sans-serif;
+    background:#FAF8F5;
+    color:#222;
+}
+
+/* ===========================
+   COLORS
+=========================== */
+
+:root{
+
+    --bg:#FAF8F5;
+    --white:#ffffff;
+
+    --primary:#5C4033;
+    --primary-hover:#86604f;
+
+    --text:#222222;
+    --light-text:#666666;
+
+    --border:#ECE8E3;
+
+    --shadow:0 5px 20px rgba(0,0,0,.06);
+
+}
+
+
+/* ===========================
+   TOP BAR
+=========================== */
+
+/* ===========================
+   TOP BAR
+=========================== */
+
+/* .top-bar{
+    height:42px;
+    background:#2E2E2E;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+} */
+.top-bar{
+    height:42px;
+    background:#2E2E2E;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;   /* Arrow aur text ke beech gap */
+
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.announcement{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.announcement-text{
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s;
+    min-width:420px;
+    text-align:center;
+}
+
+.arrow{
+    background:none;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    font-size:14px;
+    padding:4px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}
+
+.arrow:hover{
+    opacity:.7;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    width:100%;
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    background:#fff;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    max-width:1500px;
+
+    margin:auto;
+
+    height:92px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 60px;
+
+}
+
+
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    width:auto;
+
+    height:50px;
+
+}
+
+
+
+/* ===========================
+   MENU
+=========================== */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:55px;
+
+    list-style:none;
+
+}
+
+.nav-links li{
+
+    position:relative;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    font-weight:500;
+
+    text-transform:uppercase;
+
+    transition:.35s;
+
+}
+
+
+/* Underline */
+
+.nav-links li::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-10px;
+
+    width:0;
+
+    height:1px;
+
+    background:var(--primary);
+
+    transition:.35s;
+
+}
+
+.nav-links li:hover::after{
+
+    width:100%;
+
+}
+
+.nav-links li:hover a{
+
+    color:var(--primary);
+
+}
+
+
+
+/* ===========================
+   ICONS
+=========================== */
+
+.nav-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:26px;
+
+}
+
+.nav-icons a{
+
+    color:#222;
+
+    font-size:22px;
+
+    transition:.35s;
+
+}
+
+.nav-icons a:hover{
+
+    color:var(--primary);
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* ===========================
+   HAMBURGER
+=========================== */
+
+.menu-btn{
+
+    display:none;
+
+    font-size:25px;
+
+    color:#222;
+
+    cursor:pointer;
+
+}
+
+
+
+/* ===========================
+   STICKY EFFECT
+=========================== */
+
+header.scrolled{
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:991px){
+
+.navbar{
+
+    height:75px;
+
+    padding:0 25px;
+
+}
+
+.logo img{
+
+    height:40px;
+
+}
+
+.menu-btn{
+
+    display:block;
+
+}
+
+.nav-links{
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:30px;
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:.45s;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.nav-links.active{
+
+    max-height:500px;
+
+    padding:35px 0;
+
+}
+
+.nav-links li{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.nav-links li::after{
+
+    display:none;
+
+}
+
+.nav-links a{
+
+    display:block;
+
+    padding:5px 0;
+
+    font-size:15px;
+
+}
+
+.nav-icons{
+
+    gap:18px;
+
+}
+
+.nav-icons a{
+
+    font-size:20px;
+
+}
+
+.top-bar{
+
+    height:38px;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+
+}
+
+.top-bar i{
+
+    font-size:12px;
+
+}
+
+.top-bar i:first-child{
+
+    left:15px;
+
+}
+
+.top-bar i:last-child{
+
+    right:15px;
+
+}
+
+}
+
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:576px){
+
+.navbar{
+
+    padding:0 18px;
+
+}
+
+.logo img{
+
+    height:34px;
+
+}
+
+.nav-icons{
+
+    gap:15px;
+
+}
+
+.nav-icons a{
+
+    font-size:18px;
+
+}
+
+.top-bar{
+
+    font-size:9px;
+
+}
+
+}
+
+
+.wrapper{
+max-width:1600px;
+margin:auto;
+padding:20px 30px;
+
+display:grid;
+grid-template-columns:80px 760px 520px;
+gap:40px;
+}
+
+.thumbs{
+position:sticky;
+top:20px;
+height:fit-content;
+
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.thumb{
+width:62px;
+cursor:pointer;
+border:1px solid transparent;
+}
+
+.thumb.active{
+border:1px solid #111;
+}
+
+.gallery-image{
+width:100%;
+display:block;
+margin-bottom:20px;
+}
+
+.product-section{
+height:900px;
+}
+
+.brand{
+letter-spacing:4px;
+font-size:13px;
+color:#777;
+margin-bottom:20px;
+}
+
+h1{
+font-size:30px;
+font-weight:400;
+letter-spacing:4px;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.price-row{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+.sale-price{
+font-size:24px;
+color:#ff4136;
+}
+
+.old-price{
+text-decoration:line-through;
+color:#888;
+}
+
+.tax{
+margin-top:6px;
+margin-bottom:35px;
+}
+
+.sizes{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:25px;
+}
+
+.size{
+width:80px;
+height:45px;
+border:1px solid #ddd;
+background:#fff;
+cursor:pointer;
+}
+
+.active-size{
+border:1px solid #111;
+}
+
+.color-box{
+width:40px;
+height:40px;
+background:#eee;
+border:1px solid #111;
+margin:15px 0 25px;
+}
+
+.qty{
+width:150px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border:1px solid #ddd;
+padding:0 15px;
+margin-bottom:30px;
+}
+
+.qty button{
+background:none;
+border:none;
+font-size:22px;
+cursor:pointer;
+}
+
+.qty input{
+width:40px;
+border:none;
+text-align:center;
+background:none;
+}
+
+.cart-btn,
+.buy-btn{
+width:100%;
+height:52px;
+cursor:pointer;
+}
+
+.cart-btn{
+background:#fff;
+border:1px solid #ddd;
+margin-bottom:12px;
+}
+
+.buy-btn{
+background:#111;
+border:none;
+color:#fff;
+}
+
+/* SECOND SECTION */
+
+.features-section{
+position:sticky;
+top:20px;
+height:calc(100vh - 40px);
+
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+}
+
+.secure-title{
+text-align:center;
+font-weight:400;
+margin-bottom:20px;
+}
+
+.features{
+display:flex;
+justify-content:space-between;
+margin-bottom:35px;
+}
+
+.feature{
+width:90px;
+text-align:center;
+}
+
+.feature img{
+width:55px;
+height:55px;
+object-fit:contain;
+margin-bottom:8px;
+}
+
+.feature span{
+font-size:12px;
+display:block;
+}
+
+.made-india{
+text-align:center;
+margin-bottom:50px;
+}
+
+.ship-box{
+padding:30px 0;
+font-weight:600;
+border-top:1px solid #ddd;
+border-bottom:1px solid #ddd;
+margin-bottom:20px;
+}
+
+.item{
+border-bottom:1px solid #ddd;
+}
+
+.head{
+width:100%;
+padding:22px 0;
+display:flex;
+justify-content:space-between;
+border:none;
+background:none;
+cursor:pointer;
+letter-spacing:3px;
+}
+
+.content{
+display:none;
+padding-bottom:20px;
+color:#666;
+}
+
+.item.active .content{
+display:block;
+}
+
+.featured-model{
+margin-top:25px;
+font-size:18px;
+}
+
+.reviews-section{
+
+    margin-top:80px;
+
+    padding:100px 90px;
+
+    border-top:1px solid #d8d8d8;
+    border-bottom:1px solid #d8d8d8;
+
+    background:#f7f7f7;
+}
+
+.reviews-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.reviews-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+.stars{
+
+    color:#f4a300;
+
+    font-size:40px;
+
+    letter-spacing:6px;
+
+    line-height:1;
+}
+
+.review-text{
+
+    font-size:18px;
+
+    color:#0d2442;
+
+    font-weight:400;
+}
+
+.review-btn{
+
+    width:250px;
+
+    height:64px;
+
+    background:#1d2b3a;
+
+    color:white;
+
+    border:none;
+
+    border-radius:4px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.review-btn:hover{
+
+    opacity:.9;
+}
+
+@media(max-width:768px){
+
+    .reviews-section{
+
+        padding:60px 20px;
+    }
+
+    .reviews-header{
+
+        flex-direction:column;
+
+        gap:30px;
+
+        align-items:flex-start;
+    }
+
+    .review-btn{
+
+        width:100%;
+    }
+
+    .stars{
+
+        font-size:28px;
+    }
+}
+
+
+.related-products{
+     background:#fff;
+    max-width:1800px;
+    margin:40px auto;
+    padding:0 30px;
+}
+
+.related-products h2{
+    text-align:center;
+    font-size:24px;
+    letter-spacing:4px;
+    font-weight:500;
+    margin-bottom:35px;
+}
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+}
+
+.product-card{
+    cursor:pointer;
+}
+
+.product-image{
+    position:relative;
+    overflow:hidden;
+    background:#f5f5f5;
+    aspect-ratio:3/4;
+}
+
+/* Badge */
+
+.badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:#e11b22;
+    color:#fff;
+    font-size:10px;
+    font-weight:700;
+    padding:4px 8px;
+    z-index:20;
+    letter-spacing:.5px;
+}
+
+/* Images */
+
+.front-img,
+.back-img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:all .6s ease;
+}
+
+.front-img{
+    opacity:1;
+    transform:scale(1);
+}
+
+.back-img{
+    opacity:0;
+    transform:scale(1.08);
+}
+
+/* Hover Effect */
+
+.product-card:hover .front-img{
+    opacity:0;
+    transform:scale(1.08);
+}
+
+.product-card:hover .back-img{
+    opacity:1;
+    transform:scale(1);
+}
+
+/* Product Info */
+
+.product-info{
+    text-align:center;
+    padding-top:14px;
+}
+
+.product-info h4{
+    font-size:12px;
+    color:#555;
+    font-weight:400;
+    line-height:1.4;
+    margin-bottom:8px;
+}
+
+.price-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+}
+
+.sale-price{
+    color:#d32222;
+    font-size:13px;
+    font-weight:600;
+}
+
+.old-price{
+    color:#999;
+    text-decoration:line-through;
+    font-size:12px;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+    .products-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .products-grid{
+        grid-template-columns:1fr;
+    }
+
+    .related-products{
+        padding:0 15px;
+    }
+
+}
+
+
+.icon-section {
+    background: #f3f3f3;
+    padding: 70px 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-item i {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 28px;
+}
+
+.icon-item h3 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #222;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.icon-item p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #222;
+    max-width: 320px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .icon-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .icon-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 50px 20px;
+    }
+
+    .icon-item h3 {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .icon-item p {
+        font-size: 15px;
+    }
+}
+
+/*========================
+        FOOTER
+========================*/
+
+.footer{
+
+    background:#F8F7F4;
+
+    padding:80px 8% 30px;
+
+    border-top:1px solid #e6e6e6;
+
+}
+
+.footer-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1.3fr 1fr 1fr 1.4fr;
+
+    gap:70px;
+
+}
+
+.footer-logo{
+
+    width: 150px;
+
+    margin-bottom:25px;
+
+    border-radius:12px;
+
+}
+
+.about h3{
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+    color:#111;
+
+}
+
+.about p{
+
+    color:#555;
+
+    line-height:30px;
+
+    font-size:17px;
+
+}
+
+.mail{
+
+    margin-top:18px;
+
+}
+
+
+
+/*========================
+      SOCIAL
+========================*/
+
+.social-iconss{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:28px;
+
+}
+
+.social-iconss a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#111;
+
+    text-decoration:none;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.social-iconss a:hover{
+
+    background:#111;
+
+    color:#fff;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*========================
+      LINKS
+========================*/
+
+.footer-col h4{
+
+    font-size:22px;
+
+    margin-bottom:28px;
+
+    color:#111;
+
+}
+
+.footer-col ul{
+
+    list-style:none;
+
+}
+
+.footer-col li{
+
+    margin-bottom:18px;
+
+}
+
+.footer-col a{
+
+    text-decoration:none;
+
+    color:#555;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+.footer-col a:hover{
+
+    color:#8B5E3C;
+
+    padding-left:8px;
+
+}
+
+
+
+/*========================
+     NEWSLETTER
+========================*/
+
+.newsletter p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+.newsletter form{
+
+    display:flex;
+
+    background:#fff;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.newsletter input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:18px;
+
+    font-size:16px;
+
+}
+
+.newsletter button{
+
+    width:70px;
+
+    border:none;
+
+    background:#111;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.newsletter button:hover{
+
+    background:#8B5E3C;
+
+}
+
+
+
+/*========================
+      FEATURES
+========================*/
+
+.footer-features{
+
+    margin:70px 0 40px;
+
+    border-top:1px solid #ddd;
+
+    border-bottom:1px solid #ddd;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    padding:28px 0;
+
+}
+
+.footer-features div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-size:17px;
+
+    color:#444;
+
+}
+
+.footer-features i{
+
+    font-size:26px;
+
+    color:#8B5E3C;
+
+}
+
+
+
+/*========================
+      BOTTOM
+========================*/
+
+.footer-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-bottom p{
+
+    color:#777;
+
+}
+
+.footer-bottom img{
+
+    height:32px;
+
+}
+
+
+
+/*========================
+      RESPONSIVE
+========================*/
+
+@media(max-width:991px){
+
+.footer-container{
+
+grid-template-columns:1fr 1fr;
+
+gap:50px;
+
+}
+
+.footer-features{
+
+flex-direction:column;
+
+gap:25px;
+
+align-items:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.footer{
+
+padding:60px 25px;
+
+}
+
+.footer-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.social-icons{
+
+justify-content:center;
+
+}
+
+.footer-bottom{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.about h3{
+
+font-size:24px;
+
+}
+
+}
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+
+    <button class="arrow prev">
+        <i class="fa-solid fa-angle-left"></i>
+    </button>
+
+    <div class="announcement">
+        <span class="announcement-text">
+            FREE WORLDWIDE SHIPPING ON ALL ORDERS
+        </span>
+    </div>
+
+    <button class="arrow next">
+        <i class="fa-solid fa-angle-right"></i>
+    </button>
+
+</div>
+
+
+<!-- Navbar -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="logo.avif" alt="logo">
+
+</div>
+
+
+<ul class="nav-links">
+
+<li><a href="#">FESTIVE COLLECTION</a></li>
+
+<li><a href="#">NEW ARRIVALS</a></li>
+
+<li><a href="#">WOMEN'S</a></li>
+
+<li><a href="#">MEN'S</a></li>
+
+<li><a href="#">COUPLE'S</a></li>
+
+</ul>
+
+
+<div class="nav-icons">
+
+<a href="#"><i class="fa-regular fa-user"></i></a>
+
+<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+<a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+
+<div class="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+<div class="wrapper">
+
+    <!-- THUMBNAILS -->
+
+    <div class="thumbs">
+<img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-A.png?v=1766748710&width=490" class="thumb active"  data-target="img1">
+        <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-D_2048x2048.png?v=1766748726" class="thumb" data-target="img2">
+        <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-C.png?v=1766748726&width=490" class="thumb" data-target="img3">
+        <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-E.png?v=1766748726&width=490" class="thumb" data-target="img4">
+        <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-I.png?v=1766748726&width=490" class="thumb" data-target="img5">
+
+    </div>
+
+    <!-- IMAGES -->
+
+    <div class="gallery">
+
+        <img id="img1" src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-A.png?v=1766748710&width=490" class="gallery-image">
+
+        <img id="img2" src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-D_2048x2048.png?v=1766748726" class="gallery-image">
+
+        <img id="img3" src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-C.png?v=1766748726&width=490" class="gallery-image">
+
+        <img id="img4" src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-E.png?v=1766748726&width=490" class="gallery-image">
+
+        <img id="img5" src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-I.png?v=1766748726&width=490" class="gallery-image">
+        
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+
+    <div class="right-column">
+
+        <!-- SECTION 1 -->
+
+        <section class="product-section">
+
+            <p class="brand">
+                SHREE - SHE IS SPECIAL
+            </p>
+
+            <h1>
+                WOMEN LIVA MULTICOLOR
+                PRINTED KURTA WITH
+                COMFORT PANT
+            </h1>
+
+            <div class="price-row">
+
+                <span class="sale-price">
+                    RS. 2,238.99
+                </span>
+
+                <span class="old-price">
+                    RS. 2,798.99
+                </span>
+
+            </div>
+
+            <p class="tax">
+                Inclusive of all taxes
+            </p>
+
+            <p class="label">
+                Size:
+            </p>
+
+            <div class="sizes">
+
+                <button class="size active-size">XS/36</button>
+                <button class="size">S/38</button>
+                <button class="size">M/40</button>
+                <button class="size">L/42</button>
+                <button class="size">XL/44</button>
+                <button class="size">XXL/46</button>
+
+            </div>
+
+            <p class="label">
+                Color: Multicolor
+            </p>
+
+            <div class="color-box"></div>
+
+            <div class="qty">
+
+                <button id="minus">−</button>
+
+                <input id="qtyInput" value="1">
+
+                <button id="plus">+</button>
+
+            </div>
+
+            <button class="cart-btn">
+                ADD TO CART
+            </button>
+
+            <button class="buy-btn">
+                BUY NOW
+            </button>
+
+        </section>
+
+        <!-- SECTION 2 -->
+
+        <section class="features-section">
+
+            <h3 class="secure-title">
+                Secure checkout with
+            </h3>
+
+            <div class="features">
+
+                <div class="feature">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/avada-boost-sales.appspot.com/o/badges%2Fimages%2FmRCNxeXUgz4UElPtBRIr%2F15-Days-Returs.png-1763030859221?alt=media&token=1ad8a582-8d5d-4aa2-bc5e-52c3f820227a">
+                    <span>15 Days Return</span>
+                </div>
+
+                <div class="feature">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/avada-boost-sales.appspot.com/o/badges%2Fimages%2FmRCNxeXUgz4UElPtBRIr%2FCash-On-Delivery.png-1763030859221?alt=media&token=edef76b3-fed4-4664-a14c-21f75a0286bf">
+                    <span>Cash On Delivery</span>
+                </div>
+
+                <div class="feature">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/avada-boost-sales.appspot.com/o/badges%2Fimages%2FmRCNxeXUgz4UElPtBRIr%2FFree-Shopping.png-1763030859220?alt=media&token=4a0534db-40f4-4cc6-bb41-6102156cd1df">
+                    <span>Free Shipping</span>
+                </div>
+
+                <div class="feature">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/avada-boost-sales.appspot.com/o/badges%2Fimages%2FmRCNxeXUgz4UElPtBRIr%2FQuality-Guaranteed.png-1763030859219?alt=media&token=0d0d40e5-705a-4523-ad47-bffc24387413">
+                    <span>Quality Guaranteed</span>
+                </div>
+
+                <div class="feature">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/avada-boost-sales.appspot.com/o/badges%2Fimages%2FmRCNxeXUgz4UElPtBRIr%2FSecure-Checkout.png-1763030859218?alt=media&token=01569c08-a5e5-4073-80f1-d9af0885b1d3">
+                    <span>Secure Checkout</span>
+                </div>
+
+            </div>
+
+            <div class="made-india">
+                Made In India
+            </div>
+
+            <div class="ship-box">
+                Ships in less than 24 hours
+            </div>
+
+            <div class="accordion">
+
+                <div class="item">
+
+                    <button class="head">
+                        DESCRIPTION
+                        <span>+</span>
+                    </button>
+
+                    <div class="content">
+                        Beautiful printed kurta
+                        with comfort pant.
+                    </div>
+
+                </div>
+
+                <div class="item">
+
+                    <button class="head">
+                        MANUFACTURER DETAILS
+                        <span>+</span>
+                    </button>
+
+                    <div class="content">
+                        Shree Lifestyle Pvt Ltd.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="featured-model">
+
+                <strong>Featured model:</strong>
+
+                5'7" and wearing size S
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+<section class="reviews-section">
+
+    <div class="reviews-header">
+
+        <div class="reviews-left">
+
+            <div class="stars">
+                ☆ ☆ ☆ ☆ ☆
+            </div>
+
+            <span class="review-text">
+                No reviews yet
+            </span>
+
+        </div>
+
+        <button class="review-btn">
+            Write a review
+        </button>
+
+    </div>
+
+</section>
+
+<section class="related-products">
+
+    <h2>RELATED PRODUCTS</h2>
+
+    <div class="products-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-image">
+
+                <span class="badge">SAVE 20%</span>
+
+                <img src="https://www.andindia.com/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_ANDIndia/default/dw0cbeea40/images/hires/SS22/S26F98JKCEY_CREAM_9.jpg?sw=1400&sh=2100&sm=fit&strip=false" alt="" class="front-img">
+                <img src="https://www.andindia.com/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_ANDIndia/default/dw608867e3/images/hires/SS22/S26F98JKCEY_CREAM_1.jpg?sw=1400&sh=2100&sm=fit&strip=false" alt="" class="back-img">
+
+            </div>
+
+            <div class="product-info">
+                <h4>Women Green Liva Printed Co Ord Set</h4>
+
+                <div class="price-box">
+                    <span class="sale-price">Rs. 1998.99</span>
+                    <span class="old-price">Rs. 2498.99</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-image">
+
+                <span class="badge">SAVE 50%</span>
+
+                <img src="https://www.andindia.com/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_ANDIndia/default/dw33076efc/images/hires/SS22/F26V216DRCEYD_RUST%20(2).jpg?sw=1400&sh=2100&sm=fit&strip=false" alt="" class="front-img">
+                <img src="https://www.andindia.com/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_ANDIndia/default/dw318ec18a/images/hires/SS22/F26V216DRCEYD_RUST%20(5).jpg?sw=1400&sh=2100&sm=fit&strip=false" alt="" class="back-img">
+
+            </div>
+
+            <div class="product-info">
+                <h4>Women Multicolor Liva Printed Kurta</h4>
+
+                <div class="price-box">
+                    <span class="sale-price">Rs. 1748.99</span>
+                    <span class="old-price">Rs. 3498.99</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-image">
+
+                <span class="badge">SAVE 20%</span>
+
+                <img src="https://www.andindia.com/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_ANDIndia/default/dw7555c609/images/hires/SS22/S26V71DRZ130_NVY-STR%20%20(4).jpg?sw=1400&sh=2100&sm=fit&strip=false" alt="" class="front-img">
+                <img src="https://www.andindia.com/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_ANDIndia/default/dwe61b09fe/images/hires/SS22/S26V71DRZ130_NVY-STR%20%20(3).jpg?sw=1400&sh=2100&sm=fit&strip=false" alt="" class="back-img">
+
+            </div>
+
+            <div class="product-info">
+                <h4>Women Liva Multicolor Printed Kurta</h4>
+
+                <div class="price-box">
+                    <span class="sale-price">Rs. 1998.99</span>
+                    <span class="old-price">Rs. 2498.99</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="product-image">
+
+                <span class="badge">SAVE 20%</span>
+
+                <img src="https://www.andindia.com/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_ANDIndia/default/dw6204136e/images/hires/SS22/S26V151DRZ218_BLK-GLD%20(4).jpg?sw=1400&sh=2100&sm=fit&strip=false" alt="" class="front-img">
+                <img src="https://www.andindia.com/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_ANDIndia/default/dw48b53682/images/hires/SS22/S26V151DRZ218_BLK-GLD%20(7).jpg?sw=1400&sh=2100&sm=fit&strip=false" alt="" class="back-img">
+
+            </div>
+
+            <div class="product-info">
+                <h4>Women Liva Green Printed Kurta</h4>
+
+                <div class="price-box">
+                    <span class="sale-price">Rs. 1998.99</span>
+                    <span class="old-price">Rs. 2498.99</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="icon-section">
+    <div class="icon-item">
+        <i class="fa-regular fa-heart"></i>
+        <h3>MADE IN INDIA</h3>
+        <p>Our products are truly Made in India</p>
+    </div>
+
+    <div class="icon-item">
+        <i class="fa-solid fa-truck"></i>
+        <h3>FREE DELIVERY</h3>
+        <p>Enjoy free delivery on all orders</p>
+    </div>
+
+    <div class="icon-item">
+        <i class="fa-solid fa-gift"></i>
+        <h3>EASY RETURNS</h3>
+        <p>Shop with confidence, enjoy easy returns</p>
+    </div>
+
+    <div class="icon-item">
+        <i class="fa-regular fa-comments"></i>
+        <h3>TOP-NOTCH SUPPORT</h3>
+        <p>Experience best support, ensuring your satisfaction</p>
+    </div>
+
+    <div class="icon-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>SECURE PAYMENTS</h3>
+        <p>Shop securely with our trusted payment options</p>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Left -->
+        <div class="footer-col about">
+
+            <img src="logo.avif" class="footer-logo">
+
+            <h3>FAB ASSURE BY PRERNA</h3>
+
+            <p>💗 Fabulously Yours 💗</p>
+
+            <p class="mail">
+                fabassure.business@gmail.com
+            </p>
+
+            <div class="social-iconss">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Quick Links -->
+
+        <div class="footer-col">
+
+            <h4>Quick Links</h4>
+
+            <ul>
+
+                <li><a href="#">About Us</a></li>
+
+                <li><a href="#">Shipping Policy</a></li>
+
+                <li><a href="#">Refund Policy</a></li>
+
+                <li><a href="#">Privacy Policy</a></li>
+
+                <li><a href="#">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- Customer -->
+
+        <div class="footer-col">
+
+            <h4>Customer Care</h4>
+
+            <ul>
+
+                <li><a href="#">Track Order</a></li>
+
+                <li><a href="#">Contact Us</a></li>
+
+                <li><a href="#">FAQs</a></li>
+
+                <li><a href="#">Size Guide</a></li>
+
+                <li><a href="#">Exchange</a></li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- Newsletter -->
+
+        <div class="footer-col newsletter">
+
+            <h4>Subscribe & Get 10% OFF</h4>
+
+            <p>Be the first to know about new arrivals and exclusive offers.</p>
+
+            <form>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email">
+
+                <button>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Features -->
+
+    <div class="footer-features">
+
+        <div>
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <span>Free Shipping</span>
+
+        </div>
+
+        <div>
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <span>Secure Payments</span>
+
+        </div>
+
+        <div>
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>100% Secure Checkout</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <p>© 2026 FAB ASSURE BY PRERNA. All Rights Reserved.</p>
+<div>
+<img src="p1.png" alt="Payments">
+        <img src="p2.webp" alt="Payments">
+        <img src="p3.png" alt="Payments">
+</div>
+        
+
+    </div>
+
+</footer>
+<script>
+    /* THUMB CLICK */
+
+document.querySelectorAll(".thumb")
+.forEach(thumb=>{
+
+thumb.addEventListener("click",()=>{
+
+const target=
+document.getElementById(
+thumb.dataset.target
+);
+
+target.scrollIntoView({
+behavior:"smooth"
+});
+
+});
+
+});
+
+/* ACTIVE THUMB ON SCROLL */
+
+const images =
+document.querySelectorAll(".gallery-image");
+
+const thumbs =
+document.querySelectorAll(".thumb");
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const index =
+Array.from(images)
+.indexOf(entry.target);
+
+thumbs.forEach(t=>
+t.classList.remove("active")
+);
+
+thumbs[index]
+.classList.add("active");
+
+}
+
+});
+
+},
+{
+threshold:0.6
+}
+);
+
+images.forEach(img=>
+observer.observe(img)
+);
+
+/* SIZE */
+
+document
+.querySelectorAll(".size")
+.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+document
+.querySelectorAll(".size")
+.forEach(s=>
+s.classList.remove("active-size")
+);
+
+btn.classList.add("active-size");
+
+});
+
+});
+
+/* ACCORDION */
+
+document
+.querySelectorAll(".head")
+.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+btn.parentElement
+.classList.toggle("active");
+
+});
+
+});
+
+/* QTY */
+
+const qty =
+document.getElementById("qtyInput");
+
+document
+.getElementById("plus")
+.onclick=()=>{
+
+qty.value =
+parseInt(qty.value)+1;
+
+};
+
+document
+.getElementById("minus")
+.onclick=()=>{
+
+if(qty.value>1){
+
+qty.value =
+parseInt(qty.value)-1;
+
+}
+
+};
+</script>
+
+</body>
+</html>

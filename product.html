@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Shree Product</title>
+<link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+<div class="product-container">
+
+  
+        <!-- LEFT THUMBNAILS -->
+    <div class="thumb-gallery">
+        <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-A.png?v=1766748710&width=490" class="thumb active">
+        <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-D_2048x2048.png?v=1766748726" class="thumb">
+        <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-C.png?v=1766748726&width=490" class="thumb">
+        <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-E.png?v=1766748726&width=490" class="thumb">
+        <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-I.png?v=1766748726&width=490" class="thumb">
+        <img src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-I.png?v=1766748726&width=490" class="thumb">
+    </div>
+
+  
+
+    <!-- CENTER IMAGE -->
+
+    <div class="image-section">
+
+        <img
+            src="https://www.nete.in/cdn/shop/files/Paisley-Jacket-A.png?v=1766748710&width=490"
+            id="mainImage"
+            class="main-image"
+        >
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="product-info">
+
+        <div class="brand">
+            SHREE - SHE IS SPECIAL
+        </div>
+
+        <h1>
+            WOMEN LIVA MULTICOLOR
+            PRINTED KURTA WITH
+            COMFORT PANT
+        </h1>
+
+        <div class="price-wrap">
+
+            <span class="sale">
+                RS. 2,238.99
+            </span>
+
+            <span class="old">
+                RS. 2,798.99
+            </span>
+
+        </div>
+
+        <p class="tax">
+            Inclusive of all taxes
+        </p>
+
+        <div class="label">
+            Size:
+        </div>
+
+        <div class="sizes">
+
+            <button class="size active">
+                XS/36
+            </button>
+
+            <button class="size">
+                S/38
+            </button>
+
+            <button class="size">
+                M/40
+            </button>
+
+            <button class="size">
+                L/42
+            </button>
+
+            <button class="size">
+                XL/44
+            </button>
+
+            <button class="size">
+                XXL/46
+            </button>
+
+        </div>
+
+        <div class="label color-label">
+            Color: Multicolor
+        </div>
+
+        <div class="color-box"></div>
+
+        <div class="qty">
+
+            <button id="minus">−</button>
+
+            <input
+                id="qtyInput"
+                value="1"
+            >
+
+            <button id="plus">+</button>
+
+        </div>
+
+        <button class="cart-btn">
+            ADD TO CART
+        </button>
+
+        <button class="buy-btn">
+            BUY NOW
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+  const thumbs =
+document.querySelectorAll(".thumb");
+
+const mainImage =
+document.getElementById("mainImage");
+
+thumbs.forEach(thumb=>{
+
+thumb.addEventListener("click",()=>{
+
+mainImage.src = thumb.src;
+
+thumbs.forEach(t=>
+t.classList.remove("active")
+);
+
+thumb.classList.add("active");
+
+});
+
+});
+
+const sizes =
+document.querySelectorAll(".size");
+
+sizes.forEach(size=>{
+
+size.addEventListener("click",()=>{
+
+sizes.forEach(s=>
+s.classList.remove("active")
+);
+
+size.classList.add("active");
+
+});
+
+});
+
+const qtyInput =
+document.getElementById("qtyInput");
+
+document
+.getElementById("plus")
+.onclick=()=>{
+
+qtyInput.value =
+parseInt(qtyInput.value)+1;
+
+};
+
+document
+.getElementById("minus")
+.onclick=()=>{
+
+if(qtyInput.value>1){
+
+qtyInput.value =
+parseInt(qtyInput.value)-1;
+
+}
+
+};
+</script>
+</body>
+</html>
+
+  
+

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Style Slider</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.style-section {
+  padding: 16px 0 0 16px;
+  overflow: hidden;
+}
+
+.style-header {
+  margin-bottom: 20px;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #6b7280;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.style-header h2 {
+  font-size: 30px;
+  line-height: 0.9;
+  font-weight: 900;
+  color: #2b2d42;
+  margin-bottom: 8px;
+}
+
+.style-header p {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.styleSwiper {
+  overflow: visible;
+}
+
+/* EXACT SAME LOOK */
+.swiper-slide {
+  width: 72%;
+}
+
+.style-card {
+  position: relative;
+  height: 450px;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.style-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+  color: white;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 18px;
+  color: white;
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.category {
+  font-size: 9px;
+  color: #1da1f2;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.overlay h3 {
+  font-size: 24px;
+  margin: 4px 0;
+  font-weight: 800;
+}
+
+.overlay p {
+  font-size: 13px;
+  color: #d1d5db;
+  margin-bottom: 8px;
+}
+
+.rating {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.rating span {
+  opacity: 0.5;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.old-price {
+  font-size: 12px;
+  color: #9ca3af;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.discount {
+  background: #d1fae5;
+  color: #16a34a;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+  .swiper-slide {
+    width: 42%;
+  }
+
+  .style-header h2 {
+    font-size: 70px;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+  .swiper-slide {
+    width: 30%;
+  }
+
+  .style-section {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="style-section">
+  <div class="style-header">
+    <span class="tag">SOCIAL MEDIA</span>
+
+    <h2>
+      FIND YOUR <br />
+      STYLE
+    </h2>
+
+    <p>Pick your style. Watch the videos.</p>
+  </div>
+
+  <div class="swiper styleSwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Card 1 -->
+      <div class="swiper-slide">
+        <div class="style-card">
+          <img src="https://cdn.asianlive.in/digital-website/599_59231454123326324637.jpg?tr=w-800" alt="" />
+
+          <button class="play-btn">
+            <span>▶</span>
+          </button>
+
+          <div class="overlay">
+            <span class="category">ASIAN FOOTWEAR</span>
+
+            <h3>POWER PLAY 01</h3>
+
+            <p>Premium Running Shoes.</p>
+
+            <div class="rating">
+              ⭐ 4.2 <span>|</span> 32
+            </div>
+
+            <div class="price-row">
+              <div>
+                <span class="price">₹1199</span>
+                <span class="old-price">MRP ₹1699</span>
+              </div>
+
+              <span class="discount">25% OFF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="swiper-slide">
+        <div class="style-card">
+          <img src="https://cdn.asianlive.in/digital-website/599_59231454123326324637.jpg?tr=w-800" alt="" />
+
+          <button class="play-btn">
+            <span>▶</span>
+          </button>
+
+          <div class="overlay">
+            <span class="category">ASIAN FOOTWEAR</span>
+
+            <h3>POWER PLAY 01</h3>
+
+            <p>Premium Running Shoes.</p>
+
+            <div class="rating">
+              ⭐ 4.2 <span>|</span> 32
+            </div>
+
+            <div class="price-row">
+              <div>
+                <span class="price">₹1199</span>
+                <span class="old-price">MRP ₹1699</span>
+              </div>
+
+              <span class="discount">25% OFF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="swiper-slide">
+        <div class="style-card">
+          <img src="images/shoe3.jpg" alt="" />
+
+          <button class="play-btn">
+            <span>▶</span>
+          </button>
+
+          <div class="overlay">
+            <span class="category">ASIAN FOOTWEAR</span>
+
+            <h3>POWER PLAY 01</h3>
+
+            <p>Premium Running Shoes.</p>
+
+            <div class="rating">
+              ⭐ 4.2 <span>|</span> 32
+            </div>
+
+            <div class="price-row">
+              <div>
+                <span class="price">₹1199</span>
+                <span class="old-price">MRP ₹1699</span>
+              </div>
+
+              <span class="discount">25% OFF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+new Swiper(".styleSwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 12,
+  grabCursor: true,
+  freeMode: true,
+
+  breakpoints: {
+    768: {
+      spaceBetween: 16
+    },
+
+    1024: {
+      spaceBetween: 20
+    }
+  }
+});
+</script>
+
+</body>
+</html>
